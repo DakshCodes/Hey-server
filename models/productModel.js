@@ -21,7 +21,6 @@ const productSchema = new mongoose.Schema(
     category: {
       type: mongoose.ObjectId,
       ref: "Category",
-      required: true,
     },
     quantity: {
       type: Number,
@@ -33,6 +32,11 @@ const productSchema = new mongoose.Schema(
     },
     shipping: {
       type: Boolean,
+    },
+    userid: {
+      type: mongoose.ObjectId,
+      ref: "users",
+      required: true,
     },
   },
   { timestamps: true }
